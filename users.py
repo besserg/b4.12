@@ -47,7 +47,7 @@ def request_data():
     # запрашиваем у пользователя данные
     first_name = input("Введи своё имя: ")
     last_name = input("А теперь фамилию: ")
-    if input("Пол: ") in ('M', 'Male', 'М', 'Муж', 'Мужской'):
+    if input("Пол (М/Ж): ") in ('M', 'Male', 'М', 'Муж', 'Мужской'):
         gender = 'Male'
     elif input("Пол: ") in ('F', 'Female', 'Ж', 'Жен', 'Женский'):
         gender = 'Female'
