@@ -19,7 +19,7 @@ class User(Base):
     # e-mail
     email = sa.Column(sa.TEXT)
     # День рождения
-    birthdate = sa.Column(sa.TEXT)
+    birthdate = sa.Column(sa.DATE)
     # Рост
     height = sa.Column(sa.REAL)
 
