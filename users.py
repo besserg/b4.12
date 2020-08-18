@@ -19,7 +19,7 @@ class User(Base):
     # e-mail
     email = sa.Column(sa.TEXT)
     # День рождения
-    birthdate = sa.Column(sa.DATE)
+    birthdate = sa.Column(sa.TEXT)
     # Рост
     height = sa.Column(sa.REAL)
 
@@ -49,10 +49,8 @@ def request_data():
     last_name = input("А теперь фамилию: ")
     if input("Пол (М/Ж): ") in ('M', 'Male', 'М', 'Муж', 'Мужской'):
         gender = 'Male'
-    elif input("Пол: ") in ('F', 'Female', 'Ж', 'Жен', 'Женский'):
-        gender = 'Female'
     else:
-        gender = ''
+        gender = 'Female'
     email = input("e-mail: ")
     birthdate = input("День рождения (гггг-мм-дд): ")
     height = input("Рост: ")

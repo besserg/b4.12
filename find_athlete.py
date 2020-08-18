@@ -65,7 +65,8 @@ def find_athlete(a_height, a_birthdate, session):
     query = session.query(Athlete).order_by(
         sa.func.abs(sa.func.julianday(a_birthdate) - sa.func.julianday(Athlete.birthdate))).limit(1)
     for inst in query:
-        print('Атлет:', inst.name, 'День рождения:', inst.birthdate, 'Разница в возрасте:', abs(a_birthdate - inst.birthdate))
+        print('Атлет:', inst.name, 'День рождения:', inst.birthdate, 'Разница в возрасте:',
+              abs(a_birthdate - inst.birthdate))
 
 
 def finduser(idu, session):
